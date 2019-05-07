@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/GongYong.css">
+    <style>
+      .My_header{width: 510px;height: 350px;background: cornflowerblue;position: absolute;margin: auto;left: 0;bottom: 0;right: 0;top: 0;}
+      .My_header .ti{padding: 0 0 0 15px;font-size: 20px;color: #fff;margin-top: 15px;}
+      .My_header .inner{width: 100%;height: auto;padding-left:35px;}
+      .My_header .inner label{font-size: 19px;color: #fff;}
+      .My_header .inner input{width: 227px;height: 30px;}
+      .My_header .inner p{margin-top: 25px;}
+      .My_header .Yan_img{margin-top: 20px;width: 24%;height: 50px;}
+      .My_header .Yan_img .yanimg{margin-left:104px;width:100%;}
+      .My_header .btn_div{padding: 6px 0 0 139px;}
+      .My_header .btn_div .btn{width: 65px;padding: 5px 0;border: none; color: #fff;background:#00497d;}
+      .My_header .inner span{color: crimson;display: none;}
+      .My_header .Yan_img .Yan_Huan{cursor: pointer;}
+      .My_header #yy{margin: 2px 0 0 239px;cursor: pointer;position: relative;bottom: 20px;}
+   </style>
+</head>
+<body>
+     <div class="My_header">
+        <p class="ti">登录管理系统  </p>
+        <div class="inner">
+            <p class="p1"><label>管理员账号:</label><input type="text"class="userName">
+              <span class="TiZ">请输入账号</span>
+            </p>    
+            
+            <p class="p2"><label>管理员密码:</label><input type="text"class="userPass">
+                <span class="TiZ">请输入密码</span>
+            </p>
+
+            <p class="p3"><label>登录验证码:</label><input type="text"class="userYan">
+                <span class="TiZ">请输入验证码</span>
+            </p>
+            <div class="Yan_img">
+                    <img src="" alt="" class="yanimg"> 
+            </div>
+            <p class="Yan_Huan" id="yy">看不清换一张</p>
+        </div>
+           <div class="btn_div"><input type="button" value="登录" class="btn"></div>
+     </div>
+</body>
+</html>

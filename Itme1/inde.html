@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/GongYong.css">
+    <style>
+       .header{width: 100%;height:50px;background: #0f92d6;overflow: hidden;}
+       .header .LogZ{float: left; width: 183px;height: 50px;font-size: 30px;line-height: 50px;text-align: center;color: #fff;}
+       .header .my_ul{width: auto;}
+       .header .my_ul li{margin-left: 5px; cursor: pointer; width: 65px;text-align: center;height: 50px;float: left;color: #fff;}
+       .header .my_ul li span{background:url(img/ico_bg.png) no-repeat;width: 100%;height: 31px;display: block;}
+       .header .my_ul .ger{width: 100px;background: #22b7eb;}
+       .header .my_ul #cai{background-position: center 2px;}
+       .header .my_ul #mo{background-position: center -197px;}
+       .header .my_ul #xi{background-position: center -298px;}
+       .header .my_ul #kuo{background-position: center -395px;}
+
+       .header .my_ul_y{width: auto;float: right;margin-right: 45px;}
+       .header .my_ul_y li{line-height: 50px; width: 90px;height: 50px;color: #fff; cursor: pointer; background: url(img/main_link_ico.png) no-repeat;float: left;text-align: center;}
+       .header .my_ul_y li span{float: right;}
+       .header .my_ul_y .cai1{background-position: 11px 17px;}
+       .header .my_ul_y .mo1{background-position: 22px -133px;}
+       .header .my_ul_y .xi1{background-position: 32px -33px;width: 74px;}
+       .header .my_ul_y .kuo1{background-position: 32px -133px;width: 74px;}
+       .header .my_ul_y .kuo2{background-position: 32px -83px;width: 74px;}
+       .S_center .You{width: 187px;background:url(img/left_bg.png)repeat-y;top: 0;left: 0;bottom: 0;z-index: 99;  position: absolute;top: 60px;overflow-x: hidden;overflow-y: auto;}
+       
+       /* 第一个 */
+       .S_center .You div{width: 100%;height: auto;}
+       .S_center .You div .K1{width: 100%;height: auto;}
+       .S_center .You div .K1 p{border-right:2px solid #ccc;z-index: 1;}
+       .S_center .You div  .You_nav{width: 100%;height:31px;line-height: 31px; background:#009beb url(img/ico_small.png) no-repeat;background-position: right 14px;cursor: pointer;}
+       .S_center .You div .K1 .one{width: 100%;height:32px;background:#fff;cursor: pointer;overflow: hidden;}
+       .S_center .You div .K1 .one span{margin:0 0 0 10px;font-size: 15px;display: block;width: 175px;margin-top: 3px}
+       .S_center .You div .K1 .one .lan:hover{border:1px solid #ccc;border-right: #fff;z-index: 99;}
+       .S_center .You div .You_nav   .LLan{line-height: 15px; font-size: 15px;margin-left:15px;}
+        
+       .S_center .You div .K1 li .spa{border: 1px solid #ccc;border-right:none; background:url(img/ico_small.png) no-repeat;background-position:right -91px;}
+       .S_center .You div h4.dwe{background:#009beb url(img/ico_small.png) no-repeat;background-position: right -38px;}
+       .S_center .You div .You_nav2{width: 100%;height:31px;line-height: 30px;background:#009beb url(img/ico_small.png) no-repeat;background-position: right 14px;cursor: pointer;}
+       .S_center .You div .K1 .one2{width: 100%;height:32px;background:#fff;cursor: pointer;overflow: hidden;}
+       .S_center .You div .K1 .one2 span{margin:0 0 0 10px;font-size: 15px;display: block;width: 175px;margin-top: 3px}
+       .S_center .You div .K1 .one2 .lan:hover{border:1px solid #ccc;border-right: #fff;z-index: 99;}
+       .S_center .You div .You_nav2 .LLan{line-height: 15px; font-size: 15px;margin-left:15px;}
+       
+       .S_center .You div .You_nav3{width: 100%;height:31px;line-height: 31px;background:#009beb url(img/ico_small.png) no-repeat;background-position: right 14px;cursor: pointer;}
+       .S_center .You div .K1 .one3{width: 100%;height:32px;background:#fff;cursor: pointer;overflow: hidden;}
+       .S_center .You div .K1 .one3 span{margin:0 0 0 10px;font-size: 15px;display: block;width: 175px;margin-top: 3px}
+       .S_center .You div .K1 .one3 .lan:hover{border:1px solid #ccc;border-right: #fff;z-index: 99;}
+       .S_center .You div .You_nav3 .LLan{line-height: 15px; font-size: 15px;margin-left:15px;}
+       .S_center .You div{display: none;}
+       .S_center .You div.itmer1{display: block;}
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 头部的 -->
+    <div class="header">
+        <h2 class="LogZ">
+            系统管理
+        </h2>
+        <ul class="my_ul">
+            <li class="ger">
+                <span id="cai"></span>
+                <p>菜单管理</p>
+            </li>
+            <li >
+                <span id="mo"></span>
+                <p>模块管理</p>
+            </li>
+            <li>
+                <span id="xi"></span>
+                <p>系统设置</p>
+            </li>
+            <li>
+                <span  id="kuo"></span>
+                <p>扩展管理</p>
+            </li>
+        </ul>
+
+        <ul class="my_ul_y" style="float:right;">
+            <li class="cai1">
+                <span>你好，123</span>
+            </li>
+            <li class="mo1">
+                <span class="CaiDan">菜单</span><span id="ure">隐藏</span>
+            </li>
+            <li class="xi1">
+                <span>首页</span>
+            </li>
+            <li class="kuo1">
+                <span>帮助</span>
+            </li>
+            <li class="kuo2">
+                <span>退出</span>
+            </li>
+        </ul>    
+    </div> 
+    <!-- 头部结束 -->
+
+    <!-- 中间部分 -->
+    <div class="S_center">
+        <div class="You">
+            <!-- 右导航栏 -->
+        <div class="clas itmer1">
+            <h4 class="You_nav"><span class="LLan">栏目管理</span></h4>
+
+            <ul class="K1">
+                    <li class="one"> <span class="lan spa" id="LanMu">栏目管理</span></li>
+            </ul> 
+            
+            <h4 class="You_nav2"><span class="LLan">内容管理</span></h4>
+
+            <ul class="K1"> 
+                    <li class="one2"> <span class="lan" id="GongSiJieShao">公司介绍</span></li>
+                    <li class="one2"> <span class="lan">新闻中心</span></li>
+                    <li class="one2"> <span class="lan">产品展示</span></li>
+                    <li class="one2"> <span class="lan">公司相册</span></li>
+                    <li class="one2"> <span class="lan">联系我们</span></li>
+            </ul>
+            
+            <h4 class="You_nav3"><span class="LLan">快捷面板</span></h4>
+
+                <ul class="K1"> 
+                    <li class="one3"> <span class="lan">广告管理</span></li>
+                    <li class="one3"> <span class="lan">公告管理</span></li>
+                    <li class="one2"> <span class="lan">友情链接</span></li>
+                    <li class="one2"> <span class="lan">留言本管理</span></li>
+                    <li class="one2"> <span class="lan">评论管理</span></li>
+                    <li class="one2"> <span class="lan">清除系统缓存</span></li>
+                </ul>
+
+        </div>
+       <!-- 2 -->
+        <div class="clas">
+            <h4 class="You_nav"><span class="LLan">内置模块</span></h4>
+
+            <ul class="K1"> 
+                <li class="one"> <span class="lan">广告管理</span></li>
+                <li class="one"> <span class="lan">专题管理</span></li>
+                <li class="one"> <span class="lan">广告管理</span></li>
+                <li class="one"> <span class="lan">友情链接</span></li>
+                <li class="one"> <span class="lan">留言本管理</span></li>
+                <li class="one"> <span class="lan">评论本管理</span></li>
+            </ul>
+
+            <h4 class="You_nav2"><span class="LLan">其他模块</span></h4>
+        </div>
+        <!-- 3 -->
+        <div class="clas">
+            <h4 class="You_nav"><span class="LLan">系统设置</span></h4>
+
+            <ul class="K1"> 
+                    <li class="one2"> <span class="lan" id="WangZhan">网站设置</span></li>
+                    <li class="one2"> <span class="lan">伪静态|缓存设置</span></li>
+                    <li class="one2"> <span class="lan">在线服务设置</span></li>
+                    <li class="one2"> <span class="lan">清除系统缓存</span></li>
+            </ul>
+
+            <h4 class="You_nav3"><span class="LLan">静态缓存</span></h4>
+
+            <ul class="K1"> 
+                <li class="one3"> <span class="lan">一战更新全站</span></li>
+                <li class="one3"> <span class="lan">更新首页</span></li>
+                <li class="one3"> <span class="lan">更新栏目</span></li>
+                <li class="one3"> <span class="lan">更新文档</span></li>
+                <li class="one3"> <span class="lan">更新专题</span></li>
+            </ul>
+            
+            <h4 class="You_nav3"><span class="LLan">会员管理</span></h4>
+
+            <ul class="K1"> 
+                <li class="one3"> <span class="lan">会员管理</span></li>
+                <li class="one3"> <span class="lan">会员组管理</span></li>
+            </ul>
+            
+            <h4 class="You_nav3"><span class="LLan">管理员管理</span></h4>
+
+            <ul class="K1"> 
+                <li class="one3"> <span class="lan">系统用户管理</span></li>
+                <li class="one3"> <span class="lan">用户组管理</span></li>
+                <li class="one3"> <span class="lan">节点列表</span></li>
+            </ul>
+        </div>
+        <!-- 4 -->
+            <div class="clas">
+                <h4 class="You_nav"><span class="LLan">扩展管理</span></h4>
+
+                <ul class="K1"> 
+                    <li class="one"> <span class="lan">模型管理</span></li>
+                    <li class="one"> <span class="lan">菜单管理</span></li>
+                    <li class="one"> <span class="lan">数据库管理</span></li>
+                    <li class="one"> <span class="lan">联动管理</span></li>
+                    <li class="one"> <span class="lan">区域管理</span></li>
+                    <li class="one"> <span class="lan">数据管理</span></li>
+                    <li class="one"> <span class="lan">已传入文件管理</span></li>
+                </ul>
+                <h4 class="You_nav2"><span class="LLan">栏目管理</span></h4>
+
+                <ul class="K1"> 
+                    <li class="one3"> <span class="lan">修改我的信息</span></li>
+                    <li class="one"> <span class="lan">修改我的密码</span></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- 右边盒子 -->
+        <div class="rightmain">
+            <div class="rightcontent">
+                <iframe id="main" name="main" frameborder="0" scrolling="yes" src="main.html"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+   <script src="js/jquery-3.3.1.js"></script>
+   <script>
+     $(function(){
+         $(".my_ul li").click(function(){
+            var index = $(this).index();
+            $(this).addClass("ger").siblings().removeClass("ger");
+            $(".You div").eq(index).addClass("itmer1").siblings().removeClass("itmer1");
+         })
+         //设置左侧菜单栏点击与隐藏
+         var fatr = true;
+         $(".mo1").click(function(){
+            if (fatr) {
+                $(".You").hide(function(){
+                    $(".rightmain").css("left","0px");
+                });
+                $("#ure").html("显示");
+                fatr = false;
+            } else {
+                $(".You").show(function(){
+                    $(".rightmain").css("left","187px");
+                })
+                $("#ure").html("隐藏");
+                fatr = true;
+            }
+         });
+       
+        // 
+        // for (var i=0;i<)
+
+         //点击 隐藏
+        var de = true;
+        $("h4").click(function(){
+            if (de) {
+                $(this).addClass("dwe");
+                $(this).next().slideToggle();
+                de = false;
+            } else {
+                $(this).removeClass("dwe");
+                $(this).next().slideToggle();
+                de=true;
+            }
+        })
+
+         $("#LanMu").click(function(){
+            //  alert(11);
+            $("#main").attr("src","lanmuguanli.html");
+         });
+         $("#GongSiJieShao").click(function(){
+            //  alert(11);
+            $("#main").attr("src","gongsijieshao.html");
+         });
+         $("#WangZhan").click(function(){
+            //  alert(11);
+            $("#main").attr("src","wangzhanshezhi.html");
+         });
+     })
+   </script>
+   <script src="js/lode.js"></script>
