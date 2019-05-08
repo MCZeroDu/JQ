@@ -1,0 +1,15 @@
+.avt{
+    width:715px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.avt .z_left{float: left;width: 237px;text-align: center;}
+.avt .z_left img{width: 86px;height: 43px;margin:40px 0 0 0;}
+.avt .z_left .prict{font-size:25px; padding-right: 15px;}
+.avt .y_right {width: 478px;height: auto;float:right;}
+.avt .y_right img{width: 100%;}
+.avt .z_left .times{width:80px;height: 20px;border-radius:30px;background: #ccc;line-height: 20px;margin: 10px auto;color: #fff;cursor: pointer;}
+
+
+
+

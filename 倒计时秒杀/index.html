@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/GongYong.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="avt">
+
+        <div class="z_left"> 
+            <img src="img/tata.jpg" alt="">
+           <p class="left_zi">秒杀价<span class="prict">3.8元</span> 原价:<span class="y_prict">98元</span></p>
+           <h3 class="zi">Tata-上品折扣1-5折 京10店配货</h3>
+           <p class="times"></p>
+           <p class="hq">上折扣</p>
+        </div>
+
+       <div class="y_right">
+            <img src="img/miao.jpg" alt="">
+       </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    $(function(){
+    function Active(){
+        $.ajax({
+        url:"http://127.0.0.1:8888/",
+        type : "get",
+        data:{},
+        success:function(re){
+            var fer=JSON.parse(re);
+
+            var Time = new Date();
+
+            // 当前时间跟到期时间之间的毫秒数
+            var t = fer-Time.getTime();
+            if (t <= 0) {
+             clearInterval(tme);
+              $(".times").html("开始秒杀").css({
+                  "background":"red",
+              });
+              return
+            }
+        
+            //计算剩余天数
+            var day = Math.floor(t / 1000/60/60/24,10);
+            console.log(day);
+					//取余
+					// t = t % (24 * 60 * 60 * 1000);
+					//转换成小时
+					var hours = Math.floor(t /1000/60/60%24,10);
+					//取余
+					// t = t % (60 * 60 * 1000);
+					//转换成分钟
+					var min = Math.floor(t /1000/60%60,10);
+					//取余
+					// t = t % (60 * 1000);
+					//转换成秒
+					var s = Math.floor(t / 1000%60,10); 
+					$(".times").html("离开始: "+ch(day)+"天"+ch(hours)+"时"+ch(min)+"分"+ch(s)+"秒").css("width","157px");
+        }
+    })
+}
+function ch(i) { //将0-9的数字前面加上0，例1变为01
+  if (i < 10) {
+  i = "0" + i;
+  }
+  return i;
+ }
+  var tme = setInterval(Active,1000);
+});
+    
+</script>
