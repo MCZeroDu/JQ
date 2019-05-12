@@ -1,0 +1,35 @@
+.header{
+    font-size: 15px;
+    width: 100%;height: auto; background:repeat-x #F4F4F4; overflow: hidden;border-bottom: 1px solid #DCDCDC; 
+}
+.header .Fan{width: 10%;height: 40px; background:repeat-x #F4F4F4 ;text-align: center;line-height: 40px;float: left;border-right:1px solid #DCDCDC;}
+.header .Fan:active{background: #ccc;}
+.header .login{width:89%;float: left;background: #F4F4F4;height: 40px;line-height: 40px;text-align: center;}
+.active{width: 100%;overflow: hidden;height: 9.6rem;background-color:repeat-y #F4F4F4;;}
+.active .tu{width: 100%;height: auto;overflow: hidden;}
+.active .tu li{width: 100%;position: absolute;display: none;}
+.active .tu img{width: 100%;}
+.active .tu .tu_01{display: block;}
+.active .tt{width:100%;text-align: center;position: absolute;left: 0;margin-top: 8rem;}
+.active  .tt span{display:inline-block;width:.8rem;height: .8rem;margin-left:1rem;border-radius:30px;background: #CCCCCC;}
+.active  .tt .hu{background: red;}
+.How{width: 100%;}
+.How ul{width: 100%;overflow: hidden;}
+.How ul li{width: 25%;float: left;background:#eee;;text-align: center;padding: .5rem 0 .5rem 0;}
+.How ul li:active{background:#F4F4F4;}
+.How ul li img{width: 50%;}
+.How ul li .yu{width: 43%;}
+.How ul li .yy{width: 46%;}
+.How ul li .gyt{color: coral;}
+.San{width: 100%;overflow: hidden;}
+.San .rrt{width: 100%;margin: 1rem 0;overflow: hidden;}
+.San .rrt li{width: 45%;border:1px solid #EEEEEE;float: left;margin-left: 3%;}
+.San .rrt li img{width: 98%;}
+.San .rrt li .prict{font-size: 1rem;color: red;}
+.San .rrt p{width: 92%;margin: auto;}
+.San .rrt .Jiarugouwuche{color: #f60;}
+.San .rrt .Jiarugouwuche span{float: right;color: #CC0000;}
+.San .tyu{width: 90%;padding: 5px;border: 1px solid #D3D3D3;margin: 20px auto 150px auto;text-align: center;color: #666;font-size: 15px;border-radius:3px;}
+
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>购物车</title>
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/GouWuChe.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+	</head>
+	<body>
+		<div class="header">
+       		<div class="Fan"><</div> <div class="login">购物车</div>
+    	</div>
+    	<div class="conter">
+    		<div class="conter_one">
+    			<p class="zongshu"><span>共<span class="Shuliang">3</span>件商品 </span><button class="btn_qingkong">清空</button></p>
+    		</div>
+    		
+    		<div class="two_01">
+    			<a href="#" class="left_tu"><img src="images/Gs1.jpg"/></a>
+    			<div class="right_zi">
+    				<b class="b_01">罗老罗马时光四件套AY054-4颜色花色随机</b>
+    				<p class="p_01">颜色: 随机</p>
+    				<p class="p_02">积分: ￥<span class="span_01">168</span></p>
+    				<div class="div_01">
+    					<span style="float: left;font-size: 14px;">
+    						数量
+    					</span>
+    					<div style="float: left;overflow: hidden;width: 100px;border-radius:4px;border: 1px solid #000;margin-left: 1.5rem;">
+    						<input type="button" value="-" class="jian"/>
+	    					<input type="text" name="" id="" value="1" class="wei" />
+	    					<input type="button" value="+"class="jia"/>
+    					</div>
+    					<span class="dele"><img class="delect" src="images/del.png"/></span>
+    				</div>
+    			</div>
+    		</div>
+    		
+    		<div class="two_01">
+    			<a href="#" class="left_tu"><img src="images/Gs1.jpg"/></a>
+    			<div class="right_zi">
+    				<b class="b_01">罗老罗马时光四件套AY054-4颜色花色随机</b>
+    				<p class="p_01">颜色: 随机</p>
+    				<p class="p_02">积分: ￥<span class="span_01">168</span></p>
+    				<div class="div_01">
+    					<span style="float: left;font-size: 14px;">
+    						数量
+    					</span>
+    					<div style="float: left;overflow: hidden;width: 100px;border-radius:4px;border: 1px solid #000;margin-left: 1.5rem;">
+    						<input type="button" value="-" class="jian"/>
+	    					<input type="text" name="" id="" value="1" class="wei" />
+	    					<input type="button" value="+"class="jia"/>
+    					</div>
+    					<span class="dele"><img class="delect" src="images/del.png"/></span>
+    				</div>
+    			</div>
+    		</div>
+    		
+    		<div class="two_01">
+    			<a href="#" class="left_tu"><img src="images/Gs1.jpg"/></a>
+    			<div class="right_zi">
+    				<b class="b_01">罗老罗马时光四件套AY054-4颜色花色随机</b>
+    				<p class="p_01">颜色: 随机</p>
+    				<p class="p_02">积分: ￥<span class="span_01">168</span></p>
+    				<div class="div_01">
+    					<span style="float: left;font-size: 14px;">
+    						数量
+    					</span>
+    					<div style="float: left;overflow: hidden;width: 100px;border-radius:4px;border: 1px solid #000;margin-left: 1.5rem;">
+    						<input type="button" value="-" class="jian"/>
+	    					<input type="text" name="" id="" value="1" class="wei" />
+	    					<input type="button" value="+"class="jia"/>
+    					</div>
+    					<span class="dele"><img class="delect" src="images/del.png"/></span>
+    				</div>
+    			</div>
+    		</div>
+    		
+    		<p class="pp_1">商品总价格: <span class="felt_m">￥<span id="qian">212</span></span></p>
+    		<p class="pp_2"><button class="jixu">继续购物</button>  <button class="jiesuan">去结算</button></p>
+    	</div>
+    	
+    	<div class="htti">
+    		
+    	</div>
+    	<div class="foot">
+    		<ul class="Wibu">
+    			<li><a href="index.html" class="dert"></a>
+    				<p>首页</p></li>
+    			<li><a href="#" class="dert1"></a><p>搜索</p></li>
+    			<li><a href="" class="dert2"></a><p>购物车</p></li>
+    			<li><a href="个人主页.html" class="dert3"></a><p>我的</p></li>
+    		</ul>
+    	</div>
+	</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		var $oBox = $(".htti");
+		var h;
+		$(window).scroll(function(){
+			h = $(this).scrollTop();
+			if (h > 100) {
+				$oBox.show();
+			}else{
+				$oBox.hide();
+			}
+		})
+		
+		$oBox.click(function(){
+			$("html,body").animate({scrollTop:0},1000);
+			return false;
+		})
+		
+		var $prict = $(".span_01");
+		var shenme = 0;
+	    var $lef = $(".conter .jian");
+	    var $righ = $(".conter .jia");
+		
+		//
+		  $righ.click(function(){ 
+		    var t1=$(this).parent().find('input[class*=wei]'); 
+		    t1.val(parseInt(t1.val())+1) 
+		    setTotal(); 
+		  }) 
+		  $lef.click(function(){ 
+		    var t1=$(this).parent().find('input[class*=wei]'); 
+		    t1.val(parseInt(t1.val())-1) 
+		    if(parseInt(t1.val())<0){ 
+		      t1.val(0); 
+		    } 
+		    setTotal(); 
+		  }) 
+		  function setTotal(){ 
+		    var s=0; 
+		    $(".div_01").each(function(){ 
+		      // 文本框框里的 值  * 单价的 总数量;  
+		      s+=parseInt($(this).find('input[class*=wei]').val())*parseInt($prict.html()); 
+		    }); 
+		    $("#qian").html(s.toFixed(2)); 
+		  } 
+		  setTotal();
+		  
+		 var $delez = $(".btn_qingkong");
+		 $delez.click(function(){
+			$(".two_01").remove();
+			 $("#qian").html("0");
+			 $(".Shuliang").html("0");
+		 })
+		
+		$(".delect").each(function(index,ele){
+			$(this).click(function(){
+				$(".two_01").eq(index).remove();
+				setTotal();
+				var num = 0;
+				$(".two_01").each(function(index,elemt){
+					
+				})
+			});
+		})
+	})
+</script>

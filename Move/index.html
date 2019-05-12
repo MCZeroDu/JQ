@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>主页面</title>
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	    <link rel="stylesheet" type="text/css" href="css/foot.css"/>
+	</head>
+	<body>
+		<div class="header">
+       		<div class="Fan"><</div> <div class="login">优家会积分商城</div>
+    	</div>
+    	<div class="active">
+    		<ul class="tu">
+    			<li class="tu_01"><img src="images/1.jpg"/></li>
+    			<li><img src="images/1076X441 兑换油品.jpg"/></li>
+    			<li><img src="images/1076X441 兑换礼包.jpg"/></li>
+    			<li><img src="images/2.jpg"/></li>
+    		</ul>
+    		<div class="tt">
+    			<span class="hu"></span>
+	    		<span></span>
+	    		<span></span>
+	    		<span></span>
+    		</div>
+    	</div>
+    	<div class="How">
+    			<ul>
+    				<li><img src="images/btn_user_1.png"/><p class="gyt">所有商品</p></li>
+    				<li><img src="images/btn_user_2.png" class="yu"/><p>所有商品</p></li>
+    				<li><img src="images/btn_user_3.png"/><p>所有商品</p></li>
+    				<li><img src="images/btn_user_4.png" class="yy"/><p>所有商品</p></li>
+    			</ul>
+    		</div>
+    	<div class="San">
+    		<ul class="rrt">
+    			<li>
+    				<img src="images/Gs1.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo..</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    			<li class="lop">
+    				<img src="images/Gs2.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo...</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    		</ul>
+    		<ul class="rrt">
+    			<li>
+    				<img src="images/Gs3.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo...</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    			<li class="lop">
+    				<img src="images/Gs4.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo...</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    		</ul>
+    		<ul class="rrt">
+    			<li>
+    				<img src="images/Gs5.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo...</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    			<li class="lop">
+    				<img src="images/Gs6.jpg"/>
+    				<p><span class="prict">￥369.00</span></p>
+    				<p class="rrtw">罗莱罗马时光四件套Ayo...</p>
+    				<p class="Jiarugouwuche">加入购物车	<span>立即兑换</span></p>
+    			</li>
+    		</ul>
+    		<div class="tyu">加载更多>></div>
+    	</div>
+    	<div class="htti">
+    		
+    	</div>
+    	<div class="foot">
+    		<ul class="Wibu">
+    			<li><a href="index.html" class="dert"></a>
+    				<p>首页</p></li>
+    			<li><a href="sousuo.html" class="dert1"></a><p>搜索</p></li>
+    			<li><a href="购物车.html" class="dert2"></a><p>购物车</p></li>
+    			<li><a href="个人主页.html" class="dert3"></a><p>我的</p></li>
+    		</ul>
+    	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		var $oBox = $(".htti");
+//		console.log($oBox);
+		var h;
+		$(window).scroll(function(){
+			h = $(this).scrollTop();
+//			console.log(h)
+			if (h > 200) {
+				$oBox.show();
+			}else{
+				$oBox.hide();
+			}
+		})
+		$oBox.click(function(){
+			$("html,body").animate({scrollTop:0},1000);
+			return false;
+		})
+	})
+</script>

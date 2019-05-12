@@ -1,0 +1,52 @@
+.header{
+    font-size: 15px;
+    width: 100%;height: auto; background:repeat-x #F4F4F4; overflow: hidden;border-bottom: 1px solid #DCDCDC; 
+}
+.Fan{width: 10%;height: 40px; background:repeat-x #F4F4F4 ;text-align: center;line-height: 40px;float: left;border-right:1px solid #DCDCDC;}
+.Fan:active{background: #ccc;}
+.login{width:89%;float: left;background: #F4F4F4;height: 40px;line-height: 40px;text-align: center;}
+
+.active{
+    width: 100%;height: auto;
+//  background: red;
+    margin-top:5px; 
+    text-align: center;
+    font-size:14px;
+}
+   .active div{
+        width: 100%;
+          margin: 35px 0;
+        text-align: center;
+}
+     .active div  p{
+            display: none;
+        }
+     .active  div input{
+            height: 28px;
+            width: 55%;
+            
+        }
+     .active   div label{
+            margin-right:18px;
+        }
+      .active  .login_lab{
+            margin-left: 12px;
+        }
+   .active .btn{
+        margin-top: 15px;
+        width: 85%;background: red;
+        border-radius:5px;
+        outline-style: none;
+        border: none;
+        font-size: 15px;
+        font-weight:bold;
+        height: 40px;line-height: 40px;
+        color: #F4F4F4;
+    }
+  .active  .jinggao{
+        text-align: center;
+        margin-top: 25px;
+    }
+}
+//购物车
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>收货地址</title>
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+	<style type="text/css">
+		.conter{width: 98%;overflow: hidden;margin:.5rem auto;}
+		.conter .div_01{width: 90%;border: 1px solid #CCCCCC;padding: .5rem .5rem;margin:.5rem auto;}
+		.conter .div_01 .my_p{padding: .5rem 0; font-size: .85rem;}
+		.conter .div_01 .hjk{width: 100%;}
+		.conter .div_01 .hjk .raoa{font-size: 1rem;}
+		.conter .div_01 .hjk img{float: right;}
+		.conter .wwe{width: 98%;margin: auto;text-align: center;}
+		.conter .wwe button{width: 45%;outline-style: none;border: none;padding: .4rem 0;border-radius: 5px;color: #fff;font-weight: 500;}
+		.conter .wwe .ty{margin-left: .5rem;}
+		.conter .wwe .dty{background: #D43B3B;}
+		.conter .div_01 .der1{color: red;}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+       		<div class="Fan"><</div> <div class="login">收货地址</div>
+    	</div>
+    	<div class="conter">
+    		<div class="div_01">
+    			<p class="my_p">王克颍， 13052565575，上海 上海市 闸北区 芷江西路街道 南山路98号上海祥先实业有限公司 ，000000 </p>
+    			<p class="hjk"><input type="radio" name="" id="" value="" /><span class="raoa der1">配送到这个地址</span><img src="images/del.png"/></p>
+    		</div>
+    		<div class="div_01">
+    			<p class="my_p">王克颍， 13052565575，上海 上海市 闸北区 芷江西路街道 南山路98号上海祥先实业有限公司 ，000000 </p>
+    			<p class="hjk"><input type="radio" name="" id="" value="" /><span class="raoa">配送到这个地址</span><img src="images/del.png"/></p>
+    		</div>
+    		<div class="div_01">
+    			<p class="my_p">王克颍， 13052565575，上海 上海市 闸北区 芷江西路街道 南山路98号上海祥先实业有限公司 ，000000 </p>
+    			<p class="hjk"><input type="radio" name="" id="" value="" /><span class="raoa">配送到这个地址</span><img src="images/del.png"/></p>
+    		</div>
+    		
+    		<div class="wwe">
+    			<button class="dty">返回继续购物</button><button class="ty">返回继续购物</button>
+    		</div>
+    	</div>
+    	<div class="foot">
+    		<ul class="Wibu">
+    			<li><a href="index.html" class="dert"></a>
+    				<p>首页</p></li>
+    			<li><a href="#" class="dert1"></a><p>搜索</p></li>
+    			<li><a href="购物车.html" class="dert2"></a><p>购物车</p></li>
+    			<li><a href="个人主页.html" class="dert3"></a><p>我的</p></li>
+    		</ul>
+    	</div>
+	</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".conter img").click(function(){
+			$(this).parents(".div_01").remove();
+		})
+		$(".ty").click(function(){
+			location.href = "添加收货地址.html"
+		})
+	})
+</script>

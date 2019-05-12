@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>添加收货地址</title>
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/添加到收货地址.css"/>
+	</head>
+	<body>
+		<div class="header">
+       		<div class="Fan"><</div> <div class="login">添加收货地址</div>
+    	</div>
+    	<div id="blackBg"></div>
+    	<div class="conter">
+    		<ul>
+    			<li><span>收货人</span><input type="text" name="" id="" value="" class="ren" /></li>
+    			<li><span>手机号码</span><input type="text" name="" id="" value="" class="shoujihao" /></li>
+    			<li>
+                    	<span>省份</span>
+                        <p><select id="selectH_a">
+                                <option>请选择</option>
+                                <option>北京</option>
+                                <option>安徽</option>
+                                <option>福建</option>
+                                <option>江西</option>
+                                <option>广东</option>
+                                <option>广西</option>
+                                <option>贵州</option>
+                                <option>海南</option>
+                                <option>河北</option>
+                                <option>河南</option>
+                                <option>黑龙江</option>
+                                <option>湖北</option>
+                                <option>湖南</option>
+                                <option>吉林</option>
+                                <option>江苏</option>
+                            </select>
+                    	</p>
+                    </li>
+                <li>
+                    	<span>城市</span>
+                        <p><select id="selectH_b">
+                                <option>请选择</option>
+                                <option>南昌</option>
+                                <option>抚州</option>
+                                <option>赣州</option>
+                                <option>吉安</option>
+                                <option>景德镇</option>
+                                <option>九江</option>
+                                <option>萍乡</option>
+                                <option>上饶</option>
+                                <option>新余</option>
+                                <option>宜春</option>
+                                <option>鹰潭</option>
+                            </select>
+                    	</p>
+                    </li>
+                <li>
+                    	<span>地区</span>
+                        <p><select id="selectH_c">
+                                <option>请选择</option>
+                                <option>安福县</option>
+                                <option>吉州区</option>
+                                <option>青原区</option>
+                                <option>井冈山市</option>
+                                <option>吉安县</option>
+                                <option>吉水县</option>
+                                <option>峡江县</option>
+                                <option>新干县</option>
+                                <option>永丰县</option>
+                                <option>泰和县</option>
+                                <option>遂川县</option>
+                                <option>万安县</option>
+                                <option>永新县</option>
+                            </select>
+                    	</p>
+                    </li>
+                <li>
+                    	<span>详情地址</span>
+                        <p class="dzTextarea"><textarea id="detailedDz_text" maxlength="120"></textarea></p>
+                    </li>
+                <li>
+                    	<span>邮编</span>
+                        <p><input type="text" value="" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="6"></p>
+                    </li>
+    		</ul>
+    		<label class="clearfix">
+                    	<input class="fl mt4 ml5" type="checkbox" checked="checked"><span class="fl f14 pl5">设为默认地址</span>
+                    </label>
+            <button class="dzSubmit dis_biock tc f15 colorfff w100" id="bbtn" type="submit">保存</button>
+    	</div>
+    	<div class="qwer">
+    		
+    	</div>
+    	<div class="qwer1">
+    		
+    	</div>
+    	<div class="qwer2">
+    		
+    	</div>
+    	<div class="qwer3">
+    		
+    	</div>
+	</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#bbtn").click(function(){
+			
+			if($(".ren").val()==''){
+				$("#blackBg").show()
+				$(".qwer").show().html("请输入收件人名字");
+				setInterval(function(){
+				$("#blackBg").hide()
+				$(".qwer").hide()
+				},3000)
+				return;
+			}
+			
+			if ($(".shoujihao").val()=='') {
+				$("#blackBg").show()
+				$(".qwer").show().html("请输入手机号");
+				setInterval(function(){
+					$("#blackBg").hide()
+				    $(".qwer").hide()
+				},3000)
+				return;
+			}
+			
+		})
+	})
+</script>

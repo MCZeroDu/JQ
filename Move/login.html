@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆页面</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="header">
+       <div class="Fan"><</div> <div class="login">登录</div>
+    </div>
+    
+        <div class="active">
+            <div class="logUserName">
+                <label for="">请输入用户名: </label> 
+                <input type="text" class="user"placeholder="用户名">
+            </div>
+				
+            <div class="logPass">
+                <label for="" class="login_lab">请输入密码: </label> <input type="text"placeholder="密码">
+            </div>
+            <input type="button" class="btn" value="登录"/>
+            <p class="jinggao"></p>
+        </div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+ 		//点击登录按钮，对账户和密码进行验证功能
+		$('.btn').click(function(){
+			if ($('.logUserName input').val() == '') {
+			   $(".jinggao").html("账号不能为空")
+			   return; 
+			}
+			if ($('.logPass input').val() =='密码不能为空') {
+			   $(".jinggao").html("密码不能为空")
+			   return; 
+			}
+			if (YanZheng.User($('.logUserName input').val()) == false) {
+				 $(".jinggao").html("请输入正确的账号")
+			     return; 
+				
+			}
+			if (YanZheng.Pass($('.logPass input').val()) == false) {
+				 $(".jinggao").html("请输入正确的密码")
+			     return; 
+			}
+			location.href="index.html";
+		})
+	});
+	//对象存储 正则表达式
+	var YanZheng = {
+		User : function(zh){
+			//身份证号
+			var us = (/^\d{15}|\d{18}$/.test(zh));
+			return us;
+		},
+		Pass : function(pa){
+			var pas = (/^[a-zA-Z]\w{5,17}$/.test(pa));
+			return pas;
+		}
+
+	}
+</script>

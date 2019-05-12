@@ -1,0 +1,10 @@
+.foot{width: 100%;position: fixed;z-index: 999;border-top: solid 1px #2A2A2A;bottom: 0;left: 0;}
+.foot .Wibu{width: 100%;background: #3E3E3E;overflow: hidden;}
+.foot .Wibu li{width: 25%;float: left;height: 3rem;padding-top: .25rem;}
+.foot .Wibu li a{display: block;background: url(../images/footnav_ico.png);width:50%;height:24px;background-size:auto 45px;margin: auto;}
+.foot .Wibu li .dert{background-position:-0.2px 50%;}
+.foot .Wibu li .dert1{background-position:-86px 50%;}
+.foot .Wibu li .dert2{background-position:201px 50%;}
+.foot .Wibu li .dert3{background-position:-180px 50%;}
+.foot .Wibu li p{text-align: center;color: #fff;font-size: 14px;}
+.htti{width:40px;display: none; height: 40px;background: url(../images/result-top-btn.png)no-repeat;position:fixed;right:10px;top: 530px;background-size: 35px;}

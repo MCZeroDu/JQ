@@ -1,0 +1,27 @@
+.conter{width: 98%;margin:10px auto;}
+.conter .conter_one{width: 100%;overflow: hidden;}
+.conter .conter_one .zongshu{width: 95%;height: 30px;border: 2px solid #eee;margin:0 auto;line-height: 30px;overflow: hidden;padding:0.1rem 0 0 .5rem;border-radius:.3rem ;}
+.conter .conter_one .zongshu .btn_qingkong{padding: .2rem 1rem;background: #FF0000;color: #fff; float: right;margin: 2px 8px;border-radius:.3rem;outline-style: none;border: none;}
+.conter .two_01{width: 97%; overflow: hidden;border: 1px solid #666666;margin:1rem auto;border-radius:4px;}
+.conter .two_01 .left_tu{display: inline-block;float: left;width: 100px;height: 100px;margin: .5rem .3rem;}
+.conter .two_01 .left_tu img{width:100%;}
+.conter .two_01 .right_zi{margin: .5rem 0 0 .5rem;width: 95%;}
+.conter .two_01 .right_zi .b_01{font-size:.9rem;}
+.conter .two_01 .right_zi .p_01{font-size: .8rem;color: #CCCCCC;}
+.conter .two_01  .right_zi .p_02{font-size:.95rem;margin: 0 0 .2rem 0;}
+.conter .two_01  .right_zi .p_02 .span_01{font-size: 1rem;color: #FF6600;}
+.conter .two_01  .right_zi  .div_01{width:70%;float: left;overflow: hidden;line-height: 28px;}
+.conter .two_01  .right_zi .div_01 .jian{width: 25px; border: none; border-right: 1px solid #000;width: 23px;height: 28px;outline-style: none;background:transparent;font-family: "PingHei","Lucida Grande","Lucida Sans Unicode","STHeiti","Helvetica","Arial","Verdana","sans-serif";
+	font-size: 15px;
+    font-weight: bold;}
+.conter .two_01  .right_zi .div_01 .jia{width: 25px; width: 23px;height: 28px;outline-style: none;background:transparent;font-family: "PingHei","Lucida Grande","Lucida Sans Unicode","STHeiti","Helvetica","Arial","Verdana","sans-serif";
+	font-size: 15px;
+    font-weight: bold;border: none;border-left:1px solid #000;}
+.conter .two_01 .right_zi .div_01 .wei{width: 45px;font-size: 15px;text-align: center;font-weight: 700;height: 25px;background: transparent;border: none;outline-style: none;} 
+.conter .two_01 .right_zi .div_01 .dele{float:right;margin-top: 12px;}
+.conter .pp_1 {width: 95%;margin: auto;overflow: hidden;}
+.conter .pp_1 span{float:right;}
+.conter .pp_2{width: 95%;margin:15px auto 187px auto;overflow: hidden;}
+.conter .pp_2 button{width: 49%;height: 35px;color: #fff;outline-style: none;border: none;border-radius: 4px;}
+.conter .pp_2 .jixu{background: #6cb248;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);}
+.conter .pp_2 .jiesuan{background: #D22020;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);}

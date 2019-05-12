@@ -1,0 +1,7 @@
+.header{
+    font-size: 15px;
+    width: 100%;height: auto; background:repeat-x #F4F4F4; overflow: hidden;border-bottom: 1px solid #DCDCDC; 
+}
+.header .Fan{width: 10%;height: 40px; background:repeat-x #F4F4F4 ;text-align: center;line-height: 40px;float: left;border-right:1px solid #DCDCDC;}
+.header .Fan:active{background: #ccc;}
+.header .login{width:89%;float: left;background: #F4F4F4;height: 40px;line-height: 40px;text-align: center;}
