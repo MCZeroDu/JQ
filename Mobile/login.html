@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes"  />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <title>登录页</title>
+    <link rel="apple-touch-icon-precomposed" href="images/haoroomsicon.jpg" />
+    <link rel="apple-touch-startup-image" href="images/haoroomsicon.jpg" />
+    <link rel="stylesheet" href="module/sas.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>-->
+</head>
+<body class="body">
+
+<header class="u-header">
+    <div class="uc_return">
+        <div class="uc_return_l" onclick="window.history.back()"></div>
+        <div class="uc_return_c">登录</div>
+        <div class="uc_return_r"><a href="#">注册</a></div>
+    </div>
+</header>
+    
+<div class="conters1">
+    <ul class="ul_m">
+        <li class="ul_mli">
+            <a href="##" class="left_mtu"></a>
+
+                <input type="text" class="userNam" value="" placeholder="请输入手机号">
+
+            <s style="display: none" class="Qi"></s>
+        </li>
+
+        <li class="ul_mli1">
+            <a href="##" class="left_mtu1"></a>
+
+            <input type="password" class="userNam1"value=""placeholder="请输入密码">
+
+            <s class="see" style="display: none"></s>
+        </li>
+    </ul>
+
+</div>
+
+<div class="find_paw"><a href="#">忘记密码？</a></div>
+
+<div class="btn_wrap" id="login_user">
+    <span class="btn">登 录</span>
+</div>
+
+<div class="quick_register">
+    <div><a href="#">快速注册&gt;&gt;</a></div>
+</div>
+    
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+       $(".userNam,.userNam1").blur(function(){
+            if ($(this).val()==='') {
+                $(this).next().show();
+            }else{
+                $(this).next().hide();
+            }
+        })
+           $(".btn_wrap").click(function(){
+               if ($('.userNam,.userNam1').val()==='') {
+                   $(this).next().show();
+               }
+               if (YanZheng.User($('.userNam').val()) == false) {
+                   $('.Qi').show();
+                   return;
+               }
+               if (YanZheng.Pass($('.userNam1').val()) == false) {
+                   $('.see').show();
+                   return;
+               }
+               location.href="index.html";
+           })
+    })
+    //对象存储 正则表达式
+    var YanZheng = {
+        User : function(zh){
+            //身份证号
+            var us = (/^\d{15}|\d{18}$/.test(zh));
+            return us;
+        },
+        Pass : function(pa){
+            var pas = (/^[a-zA-Z]\w{5,17}$/.test(pa));
+            return pas;
+        }
+
+    }
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes"  />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" href="module/sas.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <nav id="nav">
+        <ul class="navlist">
+            <li id="n_0"><a href="index.html"><span></span></a></li>
+            <li id="n_1"><a href="gouwuche.html" ><span></span></a></li>
+            <li id="n_2"><a href="#" ><span></span></a></li>
+            <li id="n_3"><a href="productlist.html" ><span class="active"></span></a></li>
+        </ul>
+    </nav>
+    <div class="address_list">
+        <p><input type="text" placeholder="填写你的真实姓名" id="name"></p>
+        <div class="region">
+            <select name="sheng"><option value="">--请选择省份--</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option><option value="台湾省">台湾省</option><option value="其它">其它</option></select>
+            <select name="shi"><option value="">--请选择城市--</option></select>
+            <select name="qu"><option value="">--请选择地区--</option></select>
+        </div>
+        <p><input type="text" id="diZhi" placeholder="详细地址（不必重复填写地区）"></p>
+        <p><input type="text" id="phone" placeholder="手机或者电话"></p>
+        <button class="baoCun">保存</button>
+    </div>
+    <div class="address_info">
+        <p><span class="name">张三</span><span class="phone">12345678910</span></p>
+        <p><span class="sheng">某某省</span><span class="shi">某某市</span><span class="xian">某某县</span></p>
+        <div class="address_info_box">
+            <div class="bianJi">编辑</div>
+            <div class="shanChu">删除</div>
+        </div>
+    </div>
+    <div class="address_info">
+        <p><span class="name">张三</span><span class="phone">12345678910</span></p>
+        <p><span class="sheng">某某省</span><span class="shi">某某市</span><span class="xian">某某县</span></p>
+        <div class="address_info_box">
+            <div class="bianJi">编辑</div>
+            <div class="shanChu">删除</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+$(function(){
+    $(".baoCun").click(function(){
+        var $name = $("#name").val();
+        var $phone = $("#phone").val();
+        var $diZhi = $("#diZhi").val();
+        if(isNaN($("#phone").val())){
+            $("#phone").val("");
+            return;
+        }
+        if($name!=""&&$phone!=""&&$diZhi!=""){
+            var $div = "<div class='address_info'><p><span class=\"name\">"+$name+"</span><span class=\"phone\">"+$phone+"</span></p>\n" +
+                "        <p><span class=\"sheng\">某某省</span><span class=\"shi\">某某市</span><span class=\"xian\">某某县</span></p>\n" +
+                "        <div class=\"address_info_box\">\n" +
+                "            <div class=\"bianJi\">编辑</div>\n" +
+                "            <div class=\"shanChu\">删除</div>\n" +
+                "        </div></div>"
+            $("body").append($div);
+            if($name!=""&& $phone!=""&&$diZhi!=""){
+                $("#name").val("");
+                $("#phone").val("");
+                $("#diZhi").val("");
+            }
+
+        }
+        //点击删除
+        $(".shanChu").click(function () {
+            $(this).parent().parent().hide();
+        })
+    })
+})
+</script>
