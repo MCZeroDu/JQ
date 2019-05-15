@@ -8,7 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no">
     <title></title>
-    <link rel="stylesheet" href="scss/index.css">
+    <link rel="stylesheet" href="module/sas.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <nav id="nav">
@@ -48,10 +49,9 @@
     </div>
 </body>
 </html>
-<script src="js/jquery.js"></script>
+
 <script>
-
-
+$(function(){
     $(".baoCun").click(function(){
         var $name = $("#name").val();
         var $phone = $("#phone").val();
@@ -75,11 +75,10 @@
             }
 
         }
-
-
         //点击删除
         $(".shanChu").click(function () {
             $(this).parent().parent().hide();
         })
     })
+})
 </script>

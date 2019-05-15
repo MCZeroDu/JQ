@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
 	</head>
 	<body>
-		<div class="header">
+		<div class="header" style="">
        		<div class="Fan"><</div> <div class="login">购物车</div>
     	</div>
     	<div class="conter">
@@ -157,11 +157,10 @@
 			$(this).click(function(){
 				$(".two_01").eq(index).remove();
 				setTotal();
-				var num = 0;
-				$(".two_01").each(function(index,elemt){
-					
-				})
 			});
+		})
+		$(".two_01").each(function(index,ele){
+			console.log($(index).length);
 		})
 	})
 </script>

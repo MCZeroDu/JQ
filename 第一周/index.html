@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>禁止输入或启用输入框</title>
 </head>
 <body>
-$END$
+    <button class="tyu">启用/禁用</button>
+    <input type="text" id="opl"placeholder="212121">
 </body>
 </html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+
+    $(function(){
+        $(".tyu").click(function(){
+            if($("#opl").attr("disabled")=="disabled"){
+                $("#opl").removeAttr("disabled");
+            }else{
+                $("#opl").attr("disabled","disabled");
+            }
+        })
+    })
+</script>

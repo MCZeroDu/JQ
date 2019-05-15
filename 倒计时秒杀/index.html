@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="avt">
-
         <div class="z_left"> 
             <img src="img/tata.jpg" alt="">
            <p class="left_zi">秒杀价<span class="prict">3.8元</span> 原价:<span class="y_prict">98元</span></p>
@@ -18,7 +17,6 @@
            <p class="times"></p>
            <p class="hq">上折扣</p>
         </div>
-
        <div class="y_right">
             <img src="img/miao.jpg" alt="">
        </div>
@@ -48,20 +46,14 @@
               });
               return
             }
-        
             //计算剩余天数
             var day = Math.floor(t / 1000/60/60/24,10);
             console.log(day);
-					//取余
-					// t = t % (24 * 60 * 60 * 1000);
 					//转换成小时
 					var hours = Math.floor(t /1000/60/60%24,10);
-					//取余
-					// t = t % (60 * 60 * 1000);
+				
 					//转换成分钟
 					var min = Math.floor(t /1000/60%60,10);
-					//取余
-					// t = t % (60 * 1000);
 					//转换成秒
 					var s = Math.floor(t / 1000%60,10); 
 					$(".times").html("离开始: "+ch(day)+"天"+ch(hours)+"时"+ch(min)+"分"+ch(s)+"秒").css("width","157px");

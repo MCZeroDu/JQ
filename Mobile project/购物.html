@@ -1,10 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes"  />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <title>登录页</title>
+    <link rel="apple-touch-icon-precomposed" href="images/haoroomsicon.jpg" />
+    <link rel="apple-touch-startup-image" href="images/haoroomsicon.jpg" />
+    <link rel="stylesheet" href="module/sas.css">
 </head>
+
 <body>
-$END$
+<nav id="nav">
+    <ul class="navlist">
+        <li id="n_0"><a href="index.html"><span></span></a></li>
+        <li id="n_1"><a href="GouWuChe.html" ><span></span></a><div class="cartnums"style="">0</div></li>
+        <li id="n_2"><a href="Myren.html" ><span></span></a></li>
+        <li id="n_3"><a href="List.html" ><span  class="active"></span></a></li>
+    </ul>
+</nav>
+<section class="recommendcontent">
+    <ul>
+        <li class="setyuanjiao">
+            <a class="leftimages fl" id="productimg">
+                <img src="images/product/product1.png" id="imgs"/>
+            </a>
+            <a class="productcontent fl">
+                <p class="ptitle pl10">广联达变更算量</p>
+                <p class="pdes pl10">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</p>
+                <p class="pprice pl10">
+                    价格：
+                    <span class="green">￥5000</span>
+                </p>
+            </a>
+        </li>
+        <li class="buynumsli of">
+            <div class="buylabel fl">购买数量：</div>
+            <div class="buynuminput fl of">
+                <div class="reduce fl" id="jian1"></div>
+                <input type="text" class="itnums fl" id="Shu1" name="" value="1">
+                <div class="add fl" id="jia1"></div>
+            </div>
+        </li>
+    </ul>
+    <div class="decorations">
+        <div class="dtitle">详细说明</div>
+        <p>详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明</p>
+        <img src="images/product/product1.png"/>
+    </div>
+</section>
+<section class="addcart"style="margin-bottom: 150px">
+    <input type="button" class="addcartbtn" id="Obtn" value="加入购物车" />
+</section>
 </body>
 </html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        var $jian = $("#jian1");
+        var $jia  = $("#jia1");
+        var dss = parseInt($("#Shu1").val());
+        $jian.click(function(){
+            if (!isNaN(dss)){
+                if (dss < 2){
+                    dss=1;
+                } else{
+                    dss-=1;
+                }
+            } else{
+                dss=1;
+            }
+            $("#Shu1").val(dss);
+        });
+        $jia.click(function(){
+            if (!isNaN(dss)){
+                if (dss < 1){
+                    dss=1;
+                } else{
+                    dss+=1;
+                }
+            } else{
+                dss=1;
+            }
+            $("#Shu1").val(dss);
+        });
+
+        $("#Obtn").click(function(e){
+            e.stopPropagation();
+            // 获取输入框
+            var nub = Number($("#Shu1").val());
+            //获取图片；
+            console.log(nub);
+            var pro = $('#productimg'),
+             tu = $("#imgs").attr("src"),
+             x = pro.offset().left,
+             y = pro.offset().top;
+             console.log(tu)
+            //如果 页面显示 没有 #flydiv 盒子的时候 就 创建 它
+            if ($('#flydiv').length <= 0){
+                $('body').append("<div id='flydiv'><img src= "+ tu +" 'width='50'height='50'/></div>");
+            };
+            var $obj = $('#flydiv');
+            //判断是不是动画
+            if (!$obj.is(':animated')){
+                // 这个盒子的样式 添加  设置动画
+                $obj.animate({"left":x+60,'top':y+100},500,function() {
+                    $obj.stop(false,false).animate({"left":x+100,'top':y+1000,'opacity':0},1000,function(){
+                        //设置淡入效果  淡入之后 先 删除 该标签
+                        $obj.fadeOut(500,function(){
+                            $obj.remove();
+                            var num = Number($('.cartnums').html());
+                            $('.cartnums').html(num+nub);
+                            $('.cartnums').show();
+                        })
+                    })
+                })
+            }
+        })
+
+
+    })
+</script>
