@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes"  />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" href="scss/index.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul class="navlist">
+            <li id="n_0"><a href="index.html"><span></span></a></li>
+            <li id="n_1"><a href="gouwuche.html" ><span></span></a></li>
+            <li id="n_2"><a href="orderstage.html" ><span class="active"></span></a></li>
+            <li id="n_3"><a href="productlist.html" ><span></span></a></li>
+        </ul>
+    </nav>
+    <section class="order_content">
+        <h4 class="add_operate">
+            <a href="address.html" class="enter">管理收货地址</a>
+        </h4>
+        <div class="addresslist">
+            <h4 class="addtitle">收货人地址</h4>
+            <ul class="address_item">
+                <li class="radio">
+                    <input type="radio" checked = "checked" name = "address_options" value="22" >
+                </li>
+                <li class="particular">上海市&nbsp;虹口区&nbsp;临潼路255号上海兴安得力软件有限公司</li>
+                <li class="name">
+                    <b>姓名：</b>
+                    张某某&nbsp;&nbsp;&nbsp;
+                    <b>手机号码：</b>
+                    13332225556
+                </li>
+            </ul>
+            <ul class="address_item">
+                <li class="radio">
+                    <input type="radio" name = "address_options" value="11" >
+                </li>
+                <li class="particular">上海市&nbsp;虹口区&nbsp;临潼路255号上海兴安得力软件有限公司</li>
+                <li class="name">
+                    <b>姓名：</b>
+                    张某某&nbsp;&nbsp;&nbsp;
+                    <b>手机号码：</b>
+                    13332225556
+                </li>
+            </ul>
+            <ul class="address_item new_address">
+                <li class="radio">
+                    <input type="radio" name = "address_options" id="use_new_address" value="0" >
+                </li>
+                <li class="particular">使用新的收货地址</li>
+            </ul>
+            <ul class="fill_in_content" id="address_form">
+                <li>
+                    <p class="title">收货人姓名:</p>
+                    <p>
+                        <input type="text" name="consignee" id="consignee" class="text">
+                    </p>
+                </li>
+                <li>
+                    <p class="title">所在地区:</p>
+                    <div class="region">
+                        <select name="sheng"><option value="">--请选择省份--</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option><option value="台湾省">台湾省</option><option value="其它">其它</option></select>
+                        <select name="shi"><option value="">--请选择城市--</option></select>
+                        <select name="qu"><option value="">--请选择地区--</option></select>
+                    </div>
+                </li>
+                <li>
+                    <p class="title">详细地址:</p>
+                    <p>
+                        <input type="text" name="consignee"  class="text">
+                    </p>
+                </li>
+                <li>
+                    <p class="title">手机号码:</p>
+                    <p>
+                        <input type="text" name="consignee"  class="text">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="sava_address">
+                            <input type="checkbox" name="sava_address" id="sava_address">&nbsp;自动保存收货地址<span class="explain">&nbsp;(&nbsp;选择后该地址将会保存到您的收货地址列表&nbsp;)&nbsp;</span>
+                        </label>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="voiceslist">
+            <h4 class="add_title pb10 pt15">发票信息</h4>
+            <div class="pl20 pb10"><input type="checkbox" value="" class="ifvoicenot"> &nbsp;&nbsp;&nbsp;是否开发票</div>
+            <div class="voiceinfo pb15" style="display:none;">
+                <p>发票类型：</p>
+                <select class="thevioceselect"><option>普通发票</option><option>增值税发票</option></select>
+                <p class="mt15">发票抬头：</p>
+                <select class="voicetait"><option>个人</option><option>单位</option></select> <input type="text" value="" class="voiceinput">
+            </div>
+        </div>
+        <div class="shopslist pb15">
+            <h4 class="add_title pb10 pt15">商品清单</h4>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr class="shoptitles">
+                    <td width="50%" class="tc">商品名称</td>
+                    <td width="25%" class="tc">数量</td>
+                    <td width="25%" class="tc">小计</td>
+                </tr>
+                <tr class="shopproductlist">
+                    <td width="50%" class="tc"><a href="#">商品名称商品名称</a></td>
+                    <td width="25%" class="tc">3</td>
+                    <td width="25%" class="tc">500000</td>
+                </tr>
+                <tr class="shopproductlist">
+                    <td width="50%" class="tc"><a href="#">商品名称商品名称商品名称商品名称</a></td>
+                    <td width="25%" class="tc">3</td>
+                    <td width="25%" class="tc">500000</td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div class="shopslist pb15 mb50">
+            <h4 class="add_title pb10 pt15">给卖家留言</h4>
+            <textarea name="" rows="3"></textarea>
+        </div>
+    </section>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script>
+    $(function(){
+        $("input[name=address_options]").change(function () {
+            if($(this).val() == 0){
+                $("#address_form").show();
+            }else{
+                $("#address_form").hide();
+            }
+        })
+        $(".ifvoicenot").on("click",function () {
+            $(this).parent().next().toggle()
+        })
+    })
+
+</script>
